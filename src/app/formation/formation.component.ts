@@ -3,7 +3,7 @@ import { FormationService } from '../services/formation.service';
 
 @Component({
   selector: 'app-components',
-  template: '<router-outlet></router-outlet>',
+  template: '',
   providers: [FormationService] })
 export class formationComponent {
 }

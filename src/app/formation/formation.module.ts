@@ -4,14 +4,21 @@ import { FormationListComponent } from './formation-list/formation-list.componen
 import { FormationFormComponent } from './formation-form/formation-form.component';
 import { FormationRoutingModule } from './formation-routing.module';
 import { formationComponent } from './formation.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
 @NgModule({
-  declarations: [formationComponent],
+  declarations: [
+    formationComponent,
+    FormationListComponent, 
+    FormationFormComponent
+  ],
   imports: [
     CommonModule,
-    FormationRoutingModule
+    FormationRoutingModule,
+    HttpClientModule
   ]
 })
 export class FormationModule { }

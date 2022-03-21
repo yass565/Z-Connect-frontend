@@ -1,0 +1,341 @@
+.intro {
+    background-color: #28287D;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    max-height: 1200px;
+    left: 0px;
+    top: 60px;
+}
+
+.intro .row {
+    margin: 150px 50px 100px 50px;
+
+}
+.intro-un {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    /* or 140% */
+
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+}
+
+.experts {
+    color: #2360d1;
+}
+
+.intro-deux {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    
+    /* or 200% */
+
+
+    /* Muted */
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.intro-form {
+    margin-top: 40px;
+}
+
+.search-box input {
+	box-shadow: none;
+	padding-right: 35px;
+	min-height: 50px;
+    
+	border: none;
+	background: rgba(153, 164, 194, 0.22);
+	border-radius: 3px !important;
+}
+
+::placeholder{
+	color: #fff;
+}
+
+
+.search-box input:focus {		
+	background: #d6d6d6;
+	box-shadow: none;
+}
+
+.btn-search {
+    color: #FFFFFF;
+    background: #FABA1F;
+    min-height: 50px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+}
+
+.intro-col-2 {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(74px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+}
+
+.card-1 {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(74px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 15px;
+}
+
+.services {
+    background: rgba(44, 12, 111, 0.62);
+    /* glassy */
+
+    backdrop-filter: blur(74px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 5px;
+}
+
+.services-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    max-width: 470px;
+    padding: 60px;
+}
+
+.services-icon i {
+    color: #fff;
+    font-size: 40px;
+}
+
+.services-title {
+    /* Feature Card Title */
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+.services-content {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    /* or 200% */
+
+
+    color: rgba(255, 255, 255, 0.82);
+
+}
+
+/* Course section*/
+
+.domaines-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+    letter-spacing: 0.0015em;
+
+    color: #28287D;
+}
+
+.domaine {
+    display: flex;
+    
+}
+
+.domaine-btn {
+    min-height: 50px;
+    background: rgba(153, 164, 194, 0.22);
+    border-radius: 5px;
+    color: white;
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1F1F62;
+    padding: 80px 180px;
+    justify-content: center;
+}
+
+.courses-card {
+    background: rgba(255, 255, 255, 0.2);
+    /* glassy */
+
+    backdrop-filter: blur(74px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 5px;
+}
+
+.course-card-title {
+    justify-content: space-between;
+}
+
+.course-img {
+    background: rgba(255, 255, 255, 0.05);
+    /* Border Light */
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.course-desc {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    /* or 179% */
+
+
+    /* Muted */
+
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+
+.formateur-function {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* Muted */
+
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+/* Team */
+
+.team-item {
+    background-color: #3764D7;
+    background-image: linear-gradient(#3764D7
+    , #D73754
+    );
+    
+    /* glassy */
+
+    backdrop-filter: blur(74px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+}
+
+.sous-item {
+    background: rgba(255, 255, 255, 0.17);
+    /* glassy */
+
+    backdrop-filter: blur(74px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+}
+
+.sous-item h5 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.0015em;
+
+    color: #454545;
+}
+
+.function-text, .formateur-desc {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    letter-spacing: 0.0015em;
+
+    color: #454545;
+
+}
+
+.formateur-btn {
+    background: #B469EE;
+    border-radius: 5px;
+    color: white;
+    padding: auto;
+}
+
+
+/* join us */
+.join-us {
+    background: linear-gradient(89.95deg, rgba(44, 12, 111, 0.6) 0.04%, rgba(32, 50, 218, 0.6) 99.96%);
+}
+
+.join-us-item {
+    
+    background: rgba(255, 255, 255, 0.35);
+    /* glassy */
+
+    backdrop-filter: blur(74px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 5px;
+}
+
+.join-us-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 35px;
+    /* identical to box height */
+
+    letter-spacing: 0.0015em;
+
+    color: #FFFFFF;
+}
+
+.join-us-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.join-us-btn {
+    height: 50px;
+    max-width: 200px;
+}
+
+.btn-vp {
+    width: 150px;
+}

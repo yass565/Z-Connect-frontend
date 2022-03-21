@@ -1,1 +1,206 @@
-<p>formation-list works!</p>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+</head>
+
+<div>
+    <div class="intro">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="intro-un">
+                    Commencez à apprendre des meilleurs <span class="experts">experts  africains</span><br/> de leur industrie
+                </div>
+                <div class="intro-deux">
+                    Les cours sont realisée par ds experts africain qui sont passé par les meme 
+                    defie dans diffrent indestrie notre cours est 100% pratique avec des vrais realisation des projets
+                </div>
+                <div class="intro-form">
+                    <form class="navbar-form form-inline">
+                        <div class="input-group search-box col-lg-8">								
+                            <input type="text" id="search" class="form-control" placeholder="Search...">
+                        </div>
+                        <button class="btn-search col-lg-4">Rechercher</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="col-lg-2">
+                
+            </div>
+            <div class="col-lg-6 intro-col-2">
+                <img class="w-100" src="../../../assets/images/formation_landing.PNG"/>
+            </div>
+
+        </div> 
+        
+        <div class="row row-cols-md-3 services mr-5 p-5">
+            <div class="card services-item mb-5 mr-0 ml-2 mt-0">
+                <div class="services-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="services-title mt-5">
+                    Cours
+                </div>
+                <div class="services-content mt-2">
+                    cours réalisés par des entrepreneurs expertsdans leur industrie a+ certificate a la fin de formation
+                </div>
+            </div>
+            <div class="card services-item mb-5 mr-0 ml-2 mt-0">
+                <div class="services-icon">
+                    <i class='fa fa-group'></i>
+                </div>
+                <div class="services-title mt-5">
+                    Coaching
+                </div>
+                <div class="services-content mt-2">
+                    coaching individual et suiver par des coache dans chaque etaps dans votre projet
+                </div>
+            </div>
+            <div class="card services-item mb-5 mr-0 ml-2 mt-0">
+                <div class="services-icon">
+                    <i class='fa fa-comments'></i>
+                </div>
+                <div class="services-title mt-5">
+                    Communauté
+                </div>
+                <div class="services-content mt-2">
+                    large communautéé pour echanger travail en groupe
+                </div>
+            </div>
+        </div>
+        <div class="domaines-title">
+            Dans quel domaine souhaitez-vous vous formez?
+        </div>
+        <div class="courses m-0 mt-5 align-items-center">
+            <div class="domaine ">
+                <div *ngFor="let domaine of domaines">
+                    <div class="">
+                        <button class="btn domaine-btn m-1">{{domaine.domaine_name}}</button>
+                    </div>
+                </div>        
+            </div>
+            <div class="row row-cols-lg-3 m-2">
+                <div *ngFor="let formation of formations | slice:0:3">
+                    <div class="card m-2 courses-card">
+                        <img class="card-img-top" src="../../../assets/images/formation.png"/>
+                        <div class="card-body">
+                            <div class=" course-card-title d-flex">
+                                <p class="services-title">{{formation.title}}</p>
+                                <p class="course-desc">{{formation.created_at | date}}</p>
+                            </div>
+                            <div class="services-content mt-2 card-text">
+                                <div class="course-desc">
+                                    {{formation.description | slice:0:80}}
+                                </div>
+                                
+                                <div class="d-flex mt-2">
+                                    <p class="mr-5">level</p>
+                                    <p class="level">{{formation.level}}</p>
+                                </div>
+                                <div class="d-flex mt-2">
+                                    <div><i class='fas fa-user-graduate' color="white"></i>
+                                        <i class='fas fa-user-graduate' color="white"></i></div>
+                                    <p class="mr-5 course-desc">150</p>
+                                    <p class="course-desc">{{formation.price}} £</p>
+                                </div>
+                                <hr/>
+                                <div class="d-flex flex-row align-items-center">
+                                    <div class="formateur-icon"><img src="https://bootstrapious.com/i/snippets/sn-team/teacher-7.jpg" alt="" width="50" class="img-fluid rounded-circle mb-3 shadow-sm"></div>
+                                    <div class="ms-2 c-details">
+                                        <P class="mb-0">{{formation.formateur.user?.firstname}} {{formation.formateur.user?.lastname}}</P> 
+                                        <div class="d-inline-flex">
+                                            <span class="course-desc mr-2">{{formation.formateur.user.job}} </span>
+                                            <span class="course-desc mr-2">. </span>
+                                            <span class="course-desc"> {{formation.formateur.experience_years}} ans d'expérience</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div >
+                <button class="btn btn-primary rounded btn-vp"> Voir plus</button> 
+            </div>
+            
+        </div>
+        <div class="domaines-title m-5">
+            Nos formateurs
+        </div>
+
+        <div class="row row-cols-lg-4 text-center m-0 mr-5">
+
+            <!-- Team item -->
+            <div *ngFor="let formateur of formateurs | slice:0:4" >
+                <div class="mb-5 mr-0 ml-5 mt-0">
+                    <div class="team-item">
+                        <div class="sous-item">
+                            <div class="sous-item">
+                                <div class="sous-item rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-team/teacher-7.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3  shadow-sm">
+                                    <h5 class="mb-0">{{formateur.user?.lastname}} {{formateur.user?.firstname}}</h5><span class="small text-uppercase function-text">{{formateur.user.job}}</span>
+                                    <div class="formateur-desc mt-2">{{formateur.presentation_text | slice:0:60}}...</div>
+                                    <ul class="social mb-0 list-inline mt-3">
+                                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                    <button class="btn formateur-btn px-5 mt-3">Visit Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>         
+            </div><!-- End -->
+        </div>
+        <div class="domaines-title m-5">
+            Rejoignez-nous
+        </div>
+        <div class="row join-us px-5 py-5 m-5 rounded">
+            <div class="col-xl-4 m-auto">
+                <img src="../../../assets/images/join-us.PNG"/>
+            </div>
+            <div class="col-xl-8">
+                <div class="join-us-item px-4 py-5 m-5">
+                    <h5 class="join-us-title"> Rejoindre en tant qu'apprenant</h5>
+                    <div class="row m-0">
+                        <p class="join-us-text col-lg-9">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sin
+                        </p>
+                        <button class="btn btn-primary join-us-btn col-lg-3 mt-4">Réjoindre ></button>
+                    </div>
+                </div>
+
+                <div class="join-us-item px-4 py-5 m-5">
+                    <h5 class="join-us-title"> Rejoindre en tant que formateur</h5>
+                    <div class="row m-0">
+                        <p class="join-us-text col-lg-9">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sin
+                        </p>
+                        <button class="btn btn-primary join-us-btn col-lg-3 mt-4">Réjoindre ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="domaines-title m-5">
+            Nos collaborateurs
+        </div>
+        <hr/>
+        <div class="row m-5 px-2">
+            <div class="col-xl-3">
+                <img src="http://entrepreneur-z.com/wp-content/uploads/2021/08/Logo-Entrepreneur-Z-1-300x113-1.png"/>
+            </div>
+            <div class="col-xl-3">
+                <img src="http://entrepreneur-z.com/wp-content/uploads/2021/08/Logo-Entrepreneur-Z-1-300x113-1.png"/>
+            </div>
+            <div class="col-xl-3">
+                <img src="http://entrepreneur-z.com/wp-content/uploads/2021/08/Logo-Entrepreneur-Z-1-300x113-1.png"/>
+            </div>
+            <div class="col-xl-3">
+                <img src="http://entrepreneur-z.com/wp-content/uploads/2021/08/Logo-Entrepreneur-Z-1-300x113-1.png"/>
+            </div>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+    
+</div>
